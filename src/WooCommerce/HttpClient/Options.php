@@ -56,6 +56,16 @@ class Options
     }
 
     /**
+     * Get Additional CURL options.
+     *
+     * @return array
+     */
+    public function getCurlOptions()
+    {
+        return isset($this->options['curlopt']) ? $this->options['curlopt'] : [];
+    }
+
+    /**
      * Get API version.
      *
      * @return string

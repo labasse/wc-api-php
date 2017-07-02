@@ -14,6 +14,11 @@ class OptionsTest extends TestCase
         $this->options = new \Automattic\WooCommerce\HttpClient\Options([]);
     }
 
+    public function testDefaultValueOfGetCurlOptions()
+    {
+        $this->assertEquals([], $this->options->getCurlOptions());
+    }
+
     public function testDefaultValueOfGetVersion()
     {
         $this->assertEquals('v3', $this->options->getVersion());

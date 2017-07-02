@@ -300,6 +300,7 @@ class HttpClient
         \curl_setopt($this->ch, CURLOPT_RETURNTRANSFER, true);
         \curl_setopt($this->ch, CURLOPT_HTTPHEADER, $this->request->getRawHeaders());
         \curl_setopt($this->ch, CURLOPT_URL, $this->request->getUrl());
+        \curl_setopt_array($this->ch, $this->options->getCurlOptions());        
     }
 
     /**
